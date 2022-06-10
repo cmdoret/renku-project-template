@@ -1,0 +1,5 @@
+install.packages("styler")
+install.packages("lintr")
+install.packages("tidyverse")
+install.packages("tidymodels")
+install.packages(c("glue", "jsonlite", "rmarkdown", "here")

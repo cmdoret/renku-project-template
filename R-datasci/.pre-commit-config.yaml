@@ -1,0 +1,10 @@
+repos:
+-   repo: https://github.com/lorenzwalthert/precommit
+    rev: v0.3.0
+    hooks:
+        # Static code analysis: checks for syntax errors and semantic issues
+    -   id: lintr
+        args: [--warn-only, --key=value]
+        # Format code using tidyverse standard
+    -   id: style-files
+        args: [--scope=spaces, --reindention=specify_reindention('#')]
