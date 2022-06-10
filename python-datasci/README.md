@@ -14,7 +14,7 @@ This project was created with the {{ __template_id__ }} template. It has the fol
 * Common data-science packages pre-installed (listed in `requirements.txt`).
 * Pre-commit configured to format and lint code before every commit (see `.pre-commit-config.yaml`)
 * Basic project structure (inspired from [cookiecutter data-science](https://drivendata.github.io/cookiecutter-data-science/)
-* Local package in `src` (defined in `setup.py`) to allow importing the project's code
+* Local package `src` to allow importing the project's code as `import src.x` (defined in `setup.py`)
 * Makefile with simple recipes to install and test the local package
 
 ## Working with the project
