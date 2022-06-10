@@ -1,4 +1,4 @@
-requirements: install
+install:
 	pip install -U setuptools
 	pip install -r requirements.txt
 	pip install -e .
