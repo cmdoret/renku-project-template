@@ -7,16 +7,20 @@ repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
     hooks:
-    -   id: trailing-whitespace # Trim trailing whitespaces
-    -   id: check-ast # Check if code is valid python
-    -   id: check-merge-conflict # Check for merge conflict strings in files
-    -   id: end-of-file-fixer # Remove empty lines at EOF
+    # Trim trailing whitespaces
+    -   id: trailing-whitespace
+    # Check if code is valid python
+    -   id: check-ast
+    # Check for merge conflict strings in files
+    -   id: check-merge-conflict
+    # Remove empty lines at EOF
+    -   id: end-of-file-fixer
 
 -   repo: https://github.com/ambv/black
     rev: 22.3.0
     hooks:
     - id: black
-      language_version: python3.8
+      language_version: python3.9
 
 -   repo: https://gitlab.com/pycqa/flake8
     rev: 3.9.2
