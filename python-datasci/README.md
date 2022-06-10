@@ -9,7 +9,7 @@ bells and whistles. You'll find we have already created some
 useful things like `data` and `notebooks` directories and
 a `Dockerfile`.
 
-This project was created with the {{ name }} template. It has the following things pre-configured:
+This project was created with the {{ __template_id__ }} template. It has the following things pre-configured:
 
 * Common data-science packages pre-installed (listed in `requirements.txt`).
 * Pre-commit configured to format and lint code before every commit (see `.pre-commit-config.yaml`)
