@@ -24,6 +24,8 @@ RUN conda env update -q -f /tmp/environment.yml && \
     conda clean -y --all && \
     conda env export -n "root"
 
+# Setup pre-commit env
+RUN pre-commit
 # RENKU_VERSION determines the version of the renku CLI
 # that will be used in this image. To find the latest version,
 # visit https://pypi.org/project/renku/#history.
