@@ -25,6 +25,10 @@ RUN R -f /tmp/install.R
 COPY requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt
 
+# Install pre-commit hooks environments
+COPY .pre-commit-config.yaml .
+RUN git init . && pre-commit install-hooks
+
 # RENKU_VERSION determines the version of the renku CLI
 # that will be used in this image. To find the latest version,
 # visit https://pypi.org/project/renku/#history.
