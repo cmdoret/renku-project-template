@@ -11,11 +11,36 @@ a `Dockerfile`.
 
 This project was created with the {{ __template_id__ }} template. It has the following things pre-configured:
 
-* Common data-science packages pre-installed (listed in `requirements.txt`).
-* Pre-commit configured to format and lint code before every commit (see `.pre-commit-config.yaml`)
-* Basic project structure (inspired from [cookiecutter data-science](https://drivendata.github.io/cookiecutter-data-science/)
-* Local package `src` to allow importing the project's code as `import src.x` (defined in `setup.py`)
-* Makefile with simple recipes to install and test the local package
+###  Pre-installed packages
+
+Common data-science packages come pre-installed in the template (listed in `requirements.txt`).
+
+### Pre-commit
+
+Pre-commit is installed and configured to format and lint code before every commit (see `.pre-commit-config.yaml`).
+Whenever you commit code, pre-commit runs black and other tools to format it consistently. If you try to commit code containing syntax errors or undefined variables, pre-commit will show the problems and prevent the commit.
+
+If you wish to quickly commit incorrect code and skip pre-commit's analysis, you can always run `git commit --no-verify`.
+
+### Project structure
+
+The project contains a basic directory structure (inspired from [cookiecutter data-science](https://drivendata.github.io/cookiecutter-data-science/).
+
+```
+ ├── data             # data files
+ ├── notebooks        # jupyter notebooks
+ └── src              # code
+    ├── scripts       # command line scripts
+    ├── tests         # unit tests
+    └── project_name  # importable library
+```
+### Local package
+
+The `src` folder contains a subdirectory with your project's name, which can be installed as a local "development" package (defined in `setup.py`) by running `pip install -e .`. Inside a Renku session, this package will already be available thanks to the `post-init.sh` script which is executed whenever starting a session. Once installed, code in this directory can be imported from anywhere using `import project_name`.
+
+### default recipes
+
+A Makefile is also included. It contains basic recipes to install, test and lint the local package.
 
 ## Working with the project
 
