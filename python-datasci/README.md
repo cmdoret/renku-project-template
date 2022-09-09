@@ -9,6 +9,8 @@ bells and whistles. You'll find we have already created some
 useful things like `data` and `notebooks` directories and
 a `Dockerfile`.
 
+## {{ __template_id__ }} template
+
 This project was created with the {{ __template_id__ }} template. It has the following things pre-configured:
 
 ###  Pre-installed packages
@@ -18,9 +20,19 @@ Common data-science packages come pre-installed in the template (listed in `requ
 ### Pre-commit
 
 Pre-commit is installed and configured to format and lint code before every commit (see `.pre-commit-config.yaml`).
-Whenever you commit code, pre-commit runs black and other tools to format it consistently. If you try to commit code containing syntax errors or undefined variables, pre-commit will show the problems and prevent the commit.
+Whenever you commit code, pre-commit is set to run the following hooks on your code:
 
-If you wish to quickly commit incorrect code and skip pre-commit's analysis, you can always run `git commit --no-verify`.
+* trailing-whitespace: Trims whitespace at the end of lines.
+* end-of-file-fixer: Removes empty lines at the end of file.
+* check-ast: Checks if python code is valid.
+* check-merge-conflict: Prevents commits with merge conflicts.
+* [black](https://github.com/psf/black): Code formatting.
+* [flake8](https://flake8.pycqa.org/en/latest/): Checks for problematic python code.
+* [isort](https://github.com/PyCQA/isort): Sorts imports in python files.
+
+If you try to commit code containing syntax errors or undefined variables, pre-commit will show the problems and prevent you from commit until you fix the issues.
+
+If you wish to quickly commit incorrect code and ignore pre-commit's analysis, you can always run `git commit --no-verify`.
 
 ### Project structure
 
@@ -38,15 +50,15 @@ The project contains a basic directory structure (inspired from [cookiecutter da
 
 The `src` folder contains a subdirectory with your project's name, which can be installed as a local "development" package (defined in `setup.py`) by running `pip install -e .`. Inside a Renku session, this package will already be available thanks to the `post-init.sh` script which is executed whenever starting a session. Once installed, code in this directory can be imported from anywhere using `import project_name`.
 
-### default recipes
+### Default Makefile recipes
 
 A Makefile is also included. It contains basic recipes to install, test and lint the local package.
 
 ## Working with the project
 
 The simplest way to start your project is right from the Renku
-platform - just click on the `Environments` tab and start a new session.
-This will start an interactive environment right in your browser.
+platform - just click on the `Sessions` tab and start a new session.
+This will start an interactive session right in your browser.
 
 To work with the project anywhere outside the Renku platform,
 click the `Settings` tab where you will find the
