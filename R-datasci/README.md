@@ -9,12 +9,23 @@ bells and whistles. You'll find we have already created some
 useful things like `data` and `notebooks` directories and
 a `Dockerfile`.
 
+## {{ __template_id__ }} template
+
 This project was created with the {{ __template_id__ }} template. It has the following things pre-configured:
 
-* Common data-science packages pre-installed (listed in `install.R`).
-* Pre-commit configured to format and lint code before every commit (see `.pre-commit-config.yaml`)
+### Pre-installed packages
+
+Common data-science packages come pre-installed in the template (listed in `install.R`).
 
 The template includes packages part of the [{tidyverse}](https://www.tidyverse.org/) and [{tidymodels}](https://www.tidymodels.org/) ecosystems and encourages you to work with them. It also includes the [{here}](https://here.r-lib.org/articles/here.html) package for robust file referencing in the project.
+
+### Pre-commit
+
+Pre-commit is installed and configured to format and lint code before every commit (see `.pre-commit-config.yaml`).
+Whenever you commit code, pre-commit is set to run the following hooks on your code:
+
+* [lintr](https://github.com/r-lib/lintr): Static analysis of R code.
+* [styler](https://styler.r-lib.org): Formats your code using the tidyverse style.
 
 ## Working with the project
 
