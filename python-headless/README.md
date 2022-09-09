@@ -9,6 +9,11 @@ bells and whistles. You'll find we have already created some
 useful things like `data` and `notebooks` directories and
 a `Dockerfile`.
 
+
+## {{ __template_id__ }} template
+
+This project was created with the {{ __template_id__ }} template. It is identical to the python-minimal template, with the exception that it provides an additional "headless" docker image. This lightweight image will not work in interactive sessions, but is more appropriate for CI/CD workflows or other environments where jupyterlab is not needed.
+
 ## Working with the project
 
 The simplest way to start your project is right from the Renku
