@@ -22,5 +22,7 @@ headless_build:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
   script: |
-    docker build --tag ${CI_REGISTRY_IMAGE}-light:$CI_COMMIT_SHA_7 Dockerfile.headless
+    docker build \
+      --tag ${CI_REGISTRY_IMAGE}-light:$CI_COMMIT_SHA_7 \
+      --file Dockerfile.headless
     docker push ${CI_REGISTRY_IMAGE}-light:$CI_COMMIT_SHA_7
