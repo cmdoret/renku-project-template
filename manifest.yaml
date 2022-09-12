@@ -9,7 +9,7 @@
   variables: {}
   icon: python-datasci.png
 - folder: python-headless
-  name: Python (3.9) Project with a lightweight docker image
+  name: Python (3.9) project for headless workflows.
   description: Basic Python-3.9-based renku project shipped with an additional lightweight docker image fit for headless workflows.
   variables: {}
   icon: python-minimal.png
