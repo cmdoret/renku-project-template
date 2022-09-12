@@ -8,6 +8,11 @@
   description: Python-3.9-based renku project pre-configured with standard data-science tools.
   variables: {}
   icon: python-datasci.png
+- folder: python-headless
+  name: Python (3.9) Project with a lightweight docker image
+  description: Basic Python-3.9-based renku project shipped with an additional lightweight docker image fit for headless workflows.
+  variables: {}
+  icon: python-minimal.png
 - folder: R-minimal
   name: Basic R (4.1.2) Project
   description: The simplest R-4.1.2-based renku project with a basic directory structure and necessary supporting files.
